@@ -55,7 +55,6 @@ btnRoll.addEventListener('click', function () {
   if (playing) {
     // 1. generating a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
-    console.log(dice);
     // 2. display a dice
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${dice}.png`;
@@ -81,7 +80,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 2.Check if the player's score >= 100 ?
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       // 3. Finish the game.
       playing = false;
       diceEl.classList.add('hidden');
